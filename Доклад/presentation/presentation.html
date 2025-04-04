@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Глушенок А. А.">
+  <title>Обзор методов защиты файлов в операционных системах</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link href="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Freset%2Ecss" rel="stylesheet">
+  <link href="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Freveal%2Ecss" rel="stylesheet">
+  <style>
+.reveal .sourceCode { 
+overflow: visible;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <link href="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Ftheme%2Fbeige%2Ecss" rel="stylesheet" id="theme">
+  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Обзор методов защиты файлов в операционных
+системах</h1>
+  <p class="subtitle">Презентация</p>
+  <p class="author">Глушенок А. А.</p>
+  <p class="institute">Российский университет дружбы народов, Москва,
+Россия</p>
+  <p class="date">04 апреля 2025</p>
+</section>
+
+<section id="докладчик" class="slide level2">
+<h2>Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Глушенок Анна Александровна</li>
+<li>Студент НПИбд-01-24</li>
+<li>Факультет физико-математических и естественных наук</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1132246844@pfur.ru">1132246844@pfur.ru</a></li>
+<li><a href="https://github.com/aaglushenok/study_2024-2025_arh-pc" class="uri">https://github.com/aaglushenok/study_2024-2025_arh-pc</a></li>
+</ul>
+</div><div class="column" style="width:30%;">
+
+</div>
+</div>
+</section>
+<section id="актуальность-работы" class="slide level2">
+<h2>Актуальность работы</h2>
+<p><em>Актуальность защиты файлов обусловлена следующими
+факторами:</em></p>
+<ol type="1">
+<li><p>Рост киберугроз.</p></li>
+<li><p>Законодательные требования.</p></li>
+<li><p>Экономические последствия.</p></li>
+<li><p>Технологическое развитие.</p></li>
+</ol>
+</section>
+<section id="цель-и-задачи-работы" class="slide level2">
+<h2>Цель и задачи работы</h2>
+<p>Цель: определить, проанализировать и обобщить существующие методы и
+механизмы защиты файлов в ОС, определить их преимущества, недостатки и
+области применения. Составить характеристику каждого изученного метода,
+сделать заключение об его эффективности.</p>
+<p>Задачи:</p>
+<ol type="1">
+<li><p>Определить потенциальные угрозы и риски для безопасности файлов в
+операционных системах.</p></li>
+<li><p>Выявить и классифицировать основные методы защиты файлов,
+используемые в операционных системах.</p></li>
+<li><p>Выявить сильные и слабые стороны различных методов защиты файлов,
+определить области их применения в зависимости от конкретных требований
+безопасности.</p></li>
+<li><p>Оценить эффективность различных методов защиты файлов в
+системе.</p></li>
+<li><p>Обобщить результаты исследования и сформулировать рекомендации по
+применению методов защиты файлов в операционных системах.</p></li>
+</ol>
+</section>
+<section id="потенциальные-угрозы-и-риски-для-безопасности-файлов-в-операционных-системах." class="slide level2">
+<h2>Потенциальные угрозы и риски для безопасности файлов в операционных
+системах.</h2>
+<p><em>Виды угроз для безопасности файлов:</em></p>
+<ol type="1">
+<li><p>Вредоносное программное обеспечение.</p></li>
+<li><p>Несанкционированный доступ.</p></li>
+<li><p>Уязвимости программного обеспечения.</p></li>
+</ol>
+<p><em>Виды рисков для безопасности файлов:</em></p>
+<ol type="1">
+<li><p>Утечка конфиденциальных данных.</p></li>
+<li><p>Потеря данных.</p></li>
+<li><p>Нарушение целостности данных.</p></li>
+</ol>
+</section>
+<section id="основные-методы-защиты-файлов-используемые-в-операционных-системах." class="slide level2">
+<h2>Основные методы защиты файлов, используемые в операционных
+системах.</h2>
+<p><em>Защита файлов в операционной системе</em> — это процесс
+обеспечения безопасности файлов от несанкционированного доступа,
+изменения или удаления.</p>
+<p><em>Основные методы защиты файлов:</em></p>
+<ul>
+<li><p>разрешения для файлов;</p></li>
+<li><p>шифрование;</p></li>
+<li><p>списки управления доступом (ACL);</p></li>
+<li><p>аудит и ведение журналов;</p></li>
+<li><p>физическая защита файлов;</p></li>
+</ul>
+</section>
+<section id="способ-1.-разрешения-для-файлов" class="slide level2">
+<h2>Способ 1. Разрешения для файлов</h2>
+<p><em>Разрешения для файлов</em> — это базовая форма защиты файлов,
+которая контролирует доступ к файлам, устанавливая разрешения для
+пользователей и групп.</p>
+<p>Разрешения для файлов позволяют системному администратору назначать
+пользователям и группам определённые права доступа, которые могут
+включать:</p>
+<ul>
+<li><p>право на чтение.</p></li>
+<li><p>право на запись.</p></li>
+<li><p>право на выполнение.</p></li>
+</ul>
+</section>
+<section id="способ-2.-шифрование" class="slide level2">
+<h2>Способ 2. Шифрование</h2>
+<p><em>Шифрование</em> — это процесс преобразования обычного текста в
+зашифрованный для защиты файлов от несанкционированного доступа.</p>
+<p>Доступ к зашифрованным файлам могут получить только авторизованные
+пользователи, у которых есть правильный ключ шифрования для их
+расшифровки. Шифрование широко используется для защиты конфиденциальных
+данных, таких как финансовая информация, персональные данные и другая
+конфиденциальная информация. В операционной системе шифрование может
+применяться к отдельным файлам или целым каталогам, обеспечивая
+дополнительный уровень защиты от несанкционированного доступа.</p>
+</section>
+<section id="способ-3.-списки-управления-доступом-acl" class="slide level2">
+<h2>Способ 3. Списки управления доступом (ACL)</h2>
+<p><em>Списки контроля доступа (ACL)</em> — это списки разрешений,
+прикрепленные к файлам и каталогам, которые определяют, какие
+пользователи или группы имеют к ним доступ и какие действия они могут
+выполнять с ними.</p>
+<p>Списки управления доступом более детализированы, чем ранее названные
+способы. Они позволяют системному администратору точно указать, какие
+пользователи или группы могут получить доступ к определенным файлам или
+каталогам. Списки управления доступом также могут быть использованы для
+предоставления или запрещения определенных разрешений (прав на чтение,
+запись, выполнение) отдельным пользователям или группам.</p>
+</section>
+<section id="способ-4.-аудит-и-ведение-журналов" class="slide level2">
+<h2>Способ 4. Аудит и ведение журналов</h2>
+<p><em>Аудит и ведение журналов</em> — это механизмы, используемые для
+отслеживания доступа к файлам, изменений и удалений.</p>
+<p>Аудит и ведение журналов представляют собой создание записей обо всех
+обращениях к файлу и изменениях, включая то, кто обращался к файлу,
+какие действия были выполнены и когда они были выполнены. Аудит и
+ведение журнала могут помочь в обнаружении и предотвращении
+несанкционированного доступ, а также обеспечить контрольный журнал для
+целей соблюдения требований.</p>
+</section>
+<section id="способ-5.-физическая-защита-файлов" class="slide level2">
+<h2>Способ 5. Физическая защита файлов</h2>
+<p><em>Физическая защита файлов</em> — это защита файлов от физического
+повреждения или кражи.</p>
+<p>Она включает в себя такие меры, как хранение файлов и контроль
+доступа к ним, резервное копирование и восстановление, а также передовые
+методы физической защиты. Физическая защита файлов необходима для
+обеспечения целостности и доступности критически важных данных, а также
+для соблюдения нормативных требований.</p>
+</section>
+<section id="рекомендации-по-применению-методов-защиты-файлов-в-операционных-системах" class="slide level2">
+<h2>Рекомендации по применению методов защиты файлов в операционных
+системах</h2>
+<p>На основе проведенного анализа можем сформулировать следующие
+рекомендации по применению методов защиты файлов в операционных
+системах:</p>
+<ul>
+<li><p><em>Разработка комплексной стратегии защиты данных:</em></p></li>
+<li><p><em>Внедрение строгого контроля доступа:</em></p></li>
+<li><p><em>Использование шифрования для защиты конфиденциальных
+данных:</em></p></li>
+<li><p><em>Регулярное выполнение резервного копирования
+данных:</em></p></li>
+</ul>
+</section>
+<section id="заключение" class="slide level2">
+<h2>Заключение</h2>
+<p>В ходе выполнения работы мною был проведен полный обзор ключевых
+методов защиты файлов в операционных системах. Исследовательская работа
+показала, что для эффективной защиты необходимо комплексное сочетание
+всех рассмотренных мер, учет преимуществ и недостатков каждого метода,
+адаптация к конкретным потребностям, типам информации, внешним условиям
+и рискам. Постоянное обновление мер безопасности, повышение
+осведомленности пользователей, изучение и сочетание различных методов
+защиты – ключевые факторы для обеспечения надежной защиты файловых
+систем в условиях постоянно меняющихся угроз.</p>
+</section>
+<section id="благодарю-за-внимание" class="slide level2">
+<h2>Благодарю за внимание!</h2>
+</section>
+    </div>
+  </div>
+
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Freveal%2Ejs"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fplugin%2Fnotes%2Fnotes%2Ejs"></script>
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fplugin%2Fsearch%2Fsearch%2Ejs"></script>
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fplugin%2Fzoom%2Fzoom%2Ejs"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
