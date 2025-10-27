@@ -200,7 +200,7 @@ monofontoptions: Scale=MatchLowercase,Scale=0.9
 1. Запустите терминал и получите полномочия администратора.
 2. Посмотрите список переключателей SELinux для службы ftp: getsebool -a | grep ftp (переключатель ftpd_anon_write с текущим значением off)
 
-![Задание 10](image/19.png){#fig:019 width=40%}
+![Задание 10](image/20.png){#fig:020 width=40%}
 
 ## Работа с переключателями SELinux
 
@@ -209,7 +209,7 @@ monofontoptions: Scale=MatchLowercase,Scale=0.9
 5. Повторно посмотрите список переключателей SELinux для службы ftpd_anon_write: getsebool ftpd_anon_write
 6. Посмотрите список переключателей: semanage boolean -l | grep ftpd_anon (настройка времени выполнения включена, но постоянная настройка выключена)
 
-![Задание 10](image/19.png){#fig:019 width=40%}
+![Задание 10](image/21.png){#fig:021 width=40%}
 
 ## Работа с переключателями SELinux
 
